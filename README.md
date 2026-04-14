@@ -3,13 +3,18 @@
 A Manifest V3 Chrome DevTools extension that inspects live **Three.js** scene hierarchies
 with extra metadata support for **pmndrs/uikit** objects.
 
+
+<table><tr><td width="600">
+<video src="https://github.com/user-attachments/assets/657f2cf0-ad38-48bc-87b2-82db243328b6" controls></video>
+</td></tr></table>
+
 ---
 
 ## Install (unpacked)
 
 1. Open Chrome and navigate to `chrome://extensions/`.
 2. Enable **Developer mode** (top-right toggle).
-3. Click **Load unpacked** and select this folder (`chrome-uikit-devtools/`).
+3. Click **Load unpacked** and select this folder.
 4. The extension is now installed. Open DevTools (`F12` / `⌥⌘I`) on any page
    that uses Three.js — a **UIKit** tab will appear in the DevTools panel bar.
 
@@ -61,7 +66,7 @@ with extra metadata support for **pmndrs/uikit** objects.
 ┌───────▼──────────────────────────────────────────────────┐
 │  Background service worker                               │
 │  background.js                                           │
-│  └─ relays messages: content-script ↔ devtools-panel    │
+│  └─ relays messages: content-script ↔ devtools-panel     │
 └───────┬──────────────────────────────────────────────────┘
         │ chrome.runtime.connect('devtools-panel')
 ┌───────▼──────────────────────────────────────────────────┐
@@ -156,7 +161,7 @@ Chrome extension to inspect pmndrs/uikit object trees inside Three.js scenes.
 1. Open `chrome://extensions`.
 2. Enable **Developer mode**.
 3. Click **Load unpacked**.
-4. Select this folder: `tools/chrome-uikit-devtools`.
+4. Select this folder.
 5. Open target page and then open Chrome DevTools.
 6. Open **UIKit** panel.
 
