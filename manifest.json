@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "UIKit DevTools",
+  "version": "1.0.0",
+  "description": "Inspect live Three.js scene hierarchies with pmndrs/uikit metadata support. © Kirill Osipov, MIT License.",
+  "author": "Kirill Osipov <d503@acmer.me>",
+
+  "devtools_page": "devtools.html",
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["page-hook.js", "early-bootstrap.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "permissions": ["scripting"],
+  "host_permissions": ["<all_urls>"]
+}

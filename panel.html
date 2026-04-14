@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UIKit DevTools</title>
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+
+  <!-- ── Toolbar ─────────────────────────────────────────────────────────── -->
+  <div id="toolbar">
+    <span id="toolbar-title">UIKit</span>
+    <input id="search" type="text" placeholder="Filter objects…" autocomplete="off" spellcheck="false">
+    <button id="btn-refresh" class="btn" title="Rebuild snapshot now">Refresh</button>
+    <button id="btn-uikit-only" class="btn active" title="Show only UIKit objects and their ancestors">UIKit path</button>
+    <button id="btn-expand"  class="btn" title="Expand all">⊞</button>
+    <button id="btn-collapse" class="btn" title="Collapse all">⊟</button>
+    <span   id="status-dot" title="Content script connection status"></span>
+  </div>
+
+  <!-- ── Main split ──────────────────────────────────────────────────────── -->
+  <div id="main">
+
+    <!-- Tree pane -->
+    <div id="tree-pane">
+      <div id="tree-scroll">
+        <div id="tree-root"></div>
+      </div>
+    </div>
+
+    <!-- Resizer handle -->
+    <div id="resizer"></div>
+
+    <!-- Details / editor pane -->
+    <div id="details-pane">
+      <div id="details-empty">Select an object to inspect it.</div>
+      <div id="details-content" style="display:none"></div>
+    </div>
+
+  </div>
+
+  <!-- Custom context menu for tree rows -->
+  <div id="tree-context-menu" class="context-menu" style="display:none">
+    <button id="ctx-print" class="context-menu-item" type="button">Print Object</button>
+  </div>
+
+  <script src="panel.js"></script>
+</body>
+</html>
